@@ -25,13 +25,15 @@ function fetchProfile() {
         profileInfo.innerHTML = `
             <h2>${data.name || "No Name"}</h2>
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" width="100px"">
-            <p><strong>Username:</strong> ${data.login}</p>
-            <p><strong>Bio:</strong> ${data.bio || 'No bio available'}</p>
-            <p><strong>Followers:</strong> ${data.followers}</p>
-            <p><strong>Following:</strong> ${data.following}</p>
-            <p><strong>Public Repos:</strong> ${data.public_repos}</p>
-            <p><strong>Profile URL:</strong> <a href="${data.html_url}"
+            <p>Username: ${data.login}</p>
+            <p>Email: ${data.email || 'No email available'}</p>
+            <p>Bio: ${data.bio || 'No bio available'}</p>
+            <p>Followers: ${data.followers}</p>
+            <p>Following: ${data.following}</p>
+            <p>Public Repos: ${data.public_repos}</p>
+            <p>Profile URL: <a href="${data.html_url}"
             target="_blank">${data.html_url}</a></p>
+            <p>Created: ${data.created_at}</p>
             `;
     })
 
