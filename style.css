@@ -6,6 +6,34 @@ body {
     background-color: #222831;
 }
 
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97.5vh;
+    z-index: 1;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(131, 131, 131);
+}
+
+.container::before {
+    left: 400px;
+}
+
+.container::after {
+    right: 400px;
+}
+
 .container .title {
     text-align: center;
     text-shadow: 3px 3px 3px black;
@@ -56,9 +84,10 @@ body {
 .container .profile-info .section-left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     width: 35%;
+    padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
@@ -82,15 +111,26 @@ body {
     padding-left: 1%;
 }
 
-.container .profile-info .section h2 {
+.container .profile-info .section-left h2 {
     font-size: 18px;
 }
 
-.container .profile-info.section img {
-    height: auto;
+.container .profile-info .section-left img {
     width: 150px;
+    height: auto;
 }
 
-.container .profile-info .section p {
+.container .profile-info .section-left p {
     font-size: 16px;
+}
+
+.container .profile-info .error {
+    color: red;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.container footer p{
+    color: rgb(236, 236, 236);
+    text-shadow: 2px 2px 2px black;
 }
